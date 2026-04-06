@@ -1,0 +1,127 @@
+.phone-icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg-inset);
+  border: 1px solid var(--border-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 1.5rem;
+  color: var(--text-accent);
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.otp-icon {
+  background: var(--bg-surface);
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.phone-success-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2px solid var(--success);
+  color: var(--success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto 1rem;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Phone Number Input with +91 prefix */
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--border-sub);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-surface);
+  transition: var(--transition);
+  margin-top: 0.5rem;
+}
+
+.phone-input-wrapper:focus-within {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px rgba(var(--secondary-rgb), 0.1);
+}
+
+.phone-prefix {
+  padding: 0.75rem 1rem;
+  background: var(--bg-inset);
+  border-right: 1.5px solid var(--border-sub);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-main);
+  background: transparent;
+  letter-spacing: 1px;
+}
+
+/* 6-box OTP input grid */
+.otp-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.otp-box {
+  width: 52px;
+  height: 60px;
+  border: 2px solid var(--border-sub);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-header);
+  background: var(--bg-surface);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  font-family: 'Outfit', sans-serif;
+}
+
+.otp-box:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 4px rgba(var(--secondary-rgb), 0.15);
+  transform: translateY(-2px);
+}
+
+.otp-box:not(:placeholder-shown) {
+  border-color: var(--secondary);
+  background: rgba(var(--secondary-rgb), 0.05);
+}
+
+/* Text button (no background) */
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.btn-text:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}

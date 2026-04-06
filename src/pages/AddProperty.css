@@ -1,0 +1,236 @@
+.add-property-page {
+  padding-top: 100px;
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.narrow-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-header {
+  margin-bottom: 3rem;
+}
+
+.back-btn-alt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-btn-alt:hover {
+  color: var(--primary);
+}
+
+.form-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--text-accent);
+}
+
+.form-header h1 span {
+  color: var(--secondary);
+}
+
+.add-property-form {
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-sub);
+  background: var(--bg-surface);
+}
+
+.form-section {
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed var(--border-sub);
+  margin-bottom: 2rem;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  color: var(--text-accent);
+}
+
+.section-title h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid var(--border-sub);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.submit-btn {
+  width: 100%;
+  height: 56px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-md);
+}
+
+.success-view-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+
+.success-card {
+  padding: 4rem;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 500px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-sub);
+  box-shadow: var(--shadow-lg);
+}
+
+.success-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin: 1.5rem 0 1rem;
+  color: var(--text-accent);
+}
+
+.success-card p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.loader-line {
+  height: 4px;
+  width: 100px;
+  background: var(--primary);
+  margin: 2rem auto 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.loader-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: white;
+  animation: line-move 1.5s infinite linear;
+}
+
+@keyframes line-move {
+  to { left: 100%; }
+}
+
+@media (max-width: 768px) {
+  .add-property-form {
+    padding: 1.5rem;
+  }
+}
+
+/* SmartPartner Exclusive Styling */
+.smartpartner-exclusive-zone {
+  border: 1px solid rgba(232, 200, 114, 0.3);
+  background: linear-gradient(180deg, rgba(232, 200, 114, 0.05) 0%, transparent 100%);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.toggle-container {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  background-color: var(--border-sub);
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-label::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"]:checked + .toggle-label {
+  background-color: var(--secondary);
+}
+
+input[type="checkbox"]:checked + .toggle-label::after {
+  transform: translateX(24px);
+}
+
+/* Access Denied View */
+.access-denied h1 {
+  letter-spacing: 2px;
+}
+
+.access-denied .glass {
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  background: var(--bg-surface);
+}
+
+.smartpartner-badge {
+  box-shadow: 0 4px 12px rgba(232, 200, 114, 0.3);
+}

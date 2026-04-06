@@ -1,0 +1,146 @@
+.wishlist-page {
+  padding-top: 100px;
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+.wishlist-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: var(--text-header);
+  margin: 1rem 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--primary);
+}
+
+.empty-wishlist {
+  max-width: 600px;
+  margin: 6rem auto;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius-xl);
+}
+
+.empty-wishlist h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--text-header);
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.wishlist-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid var(--border-sub);
+}
+
+.wishlist-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-image {
+  height: 220px;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  z-index: 5;
+  color: var(--text-accent);
+}
+
+.remove-btn:hover {
+  transform: scale(1.1);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--text-header);
+  margin-bottom: 0.5rem;
+}
+
+.card-body .rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  color: var(--text-accent);
+  font-size: 0.9rem;
+}
+
+.card-body .location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.price-tag {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.price-tag strong {
+  font-size: 1.3rem;
+  color: var(--text-accent);
+}
+
+@media (max-width: 640px) {
+  .wishlist-header h1 {
+    font-size: 1.8rem;
+  }
+}
